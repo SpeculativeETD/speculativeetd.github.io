@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="AuditoryBench">
+  <meta property="og:title" content="AuditoryBench"/>
+  <meta property="og:description" content="AuditoryBench Project Page"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>AuditoryBench</title>
+<!--   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet"> -->
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+</head>
+
+<style>
+  .item {
+    padding-bottom: 20px; 
+    max-width: 100%;
+}
+  
+  .case-study-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+  
+.case-study-box {
+    width: 65%; 
+    max-width: 1000px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.model-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Mobile layout - flex direction changes */
+@media (max-width: 768px) {
+  .model-row {
+    flex-direction: column;
+  }
+}
+
+  .icon {
+    font-size: 18px;
+    margin-left: 5px;
+  }
+
+
+  .model-name {
+    font-weight: bold;
+  }
+
+  .text-danger {
+    color: red;
+  }
+
+  .text-success {
+    color: green;
+  }
+  
+
+  .audio-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .audio-icon {
+    font-size: 22px;
+    margin-left: 10px;
+    color: #007bff;
+  }
+
+  .case-study-container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center; 
+  margin-bottom: 40px;
+}
+
+
+  .case-study-box2 {
+    width: 65%;
+    max-width: 1000px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    padding: 15px; 
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .case-study-box2 p {
+    font-size: 16px; 
+  }
+
+  .spectrogram-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .spectrogram-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 250px; 
+  }
+
+  .spectrogram-box img {
+    width: 250px; 
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+
+  .spectrogram-label {
+    font-size: 16px; 
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .audio-container2 {
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 6px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+  } 
+
+
+  .dki-section {
+  margin-top: 100px !important; 
+}
+
+  .fusion-section {
+  margin-top: 100px !important; 
+}
+
+.fusion-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.fusion-image {
+  max-width: 100%; 
+  width: 600px;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+}
+
+  .carousel {
+  max-width: 100%; 
+}
+</style>
+  
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-3 publication-title">AuditoryBench: Can Language Models Understand
+Auditory Knowledge without Hearing?</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block"> 
+                <a href="https://hj-ok.github.io" target="_blank">Hyunjong Ok</a><sup>1,2*</sup>,</span>
+                <span class="author-block">
+                  <a href="https://suho-yoo.github.io/" target="_blank">Suho Yoo</a><sup>2,3*</sup>,</span>
+                  <span class="author-block">
+                  <span>Hyeonjun Kim</span><sup>1</sup>,</span>
+                  <span class="author-block">
+                  <a href="https://mm.kaist.ac.kr/joon/" target="_blank">Joon Son Chung</a><sup>3</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://jaeho-lee.github.io" target="_blank">Jaeho Lee</a><sup>1</sup>
+                  </span>
+              </div>
+
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>POSTECH <sup>2</sup>HJ AILAB <sup>3</sup>KAIST  <!-- <br>ICASSP 2026 Submission</span>   -->
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                  </div>
+
+
+<!--                   <div class="column has-text-centered">
+                    <div class="publication-links">
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2503.16853.pdf" target="_blank" 
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span> -->
+
+                  <!-- Github link -->
+<!--                   <span class="link-block">
+                    <a href="https://github.com/uso7d0/ImagineToHear" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span> -->
+
+                <!-- ArXiv abstract Link -->
+<!--                 <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span> -->
+<!--                   <span>arXiv</span> -->
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+
+
+  
+  
+
+      
+<!-- Paper abstract -->
+  <section class="section hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="section-title has-text-centered">
+        <h3 class="title is-3">Abstract</h3>
+      </div>
+      <div class="content has-text-justified">
+        <p style="font-size:18px;">
+            TBD
+          </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Model Architecture Section -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop" style="margin-top: 10px;">
+      <div class="section-title has-text-centered">
+        <h3 class="title is-3">Ablation Study</h3>
+      </div>
+      <div class="content has-text-left">
+        <img src="static/images/ITH_model.png" alt="Model Architecture" style="display: inline-block; margin-top: 30px;"/>
+        <p style="font-size:17px; margin-top: 30px;"><strong>TBD</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>TBD</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
